@@ -3,7 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'dart:io';
 import 'package:flutter/material.dart';
 
-import '../assets/app_icons.dart';
+import '../assets/app_colors.dart';
 import '../assets/app_images.dart';
 import '../theme/app_colors.dart';
 import '../theme/app_fonts.dart';
