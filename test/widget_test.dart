@@ -7,6 +7,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:thekettu/app.dart';
 
 import 'package:thekettu/main.dart';
 
