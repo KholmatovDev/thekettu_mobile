@@ -1,0 +1,22 @@
+
+import 'package:go_router/go_router.dart';
+import 'package:thekettu/core/service/navigation/routing.dart';
+import 'package:thekettu/presentation/pages/auth/login_screen.dart';
+
+import '../transition/transitions.dart';
+import 'navigation_service.dart';
+
+class AppGoRouter {
+  final router = GoRouter(
+    navigatorKey: NavigationService.navigatorKey,
+    initialLocation: RoutingConstants.authScreen,
+    routes: [
+      /// TEST
+      GoRoute(
+        path: RoutingConstants.authScreen,
+        pageBuilder: (context, state) => slideTransitionRight(state, const LoginScreen()),
+      ),
+
+    ],
+  );
+}
