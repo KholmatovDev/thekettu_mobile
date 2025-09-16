@@ -1,7 +1,7 @@
-
 import 'package:go_router/go_router.dart';
 import 'package:thekettu/core/service/navigation/routing.dart';
-import 'package:thekettu/presentation/pages/auth/login_screen.dart';
+import 'package:thekettu/presentation/pages/auth/auth_screen.dart';
+import 'package:thekettu/presentation/pages/home/home_screen.dart';
 
 import '../transition/transitions.dart';
 import 'navigation_service.dart';
@@ -16,7 +16,10 @@ class AppGoRouter {
         path: RoutingConstants.authScreen,
         pageBuilder: (context, state) => slideTransitionRight(state, const LoginScreen()),
       ),
-
+      GoRoute(
+        path: RoutingConstants.homeScreen,
+        pageBuilder: (context, state) => slideTransitionRight(state, const HomeScreen()),
+      ),
     ],
   );
 }
