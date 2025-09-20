@@ -25,7 +25,7 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     appLinks.uriLinkStream.listen((uri) {
-      sl<AuthCubit>().login(token: uri.queryParameters["token"].toString(), success: () => NavigationService.navigatorKey.currentContext!.push(RoutingConstants.homeScreen));
+      sl<AuthCubit>().login(token: uri.queryParameters["token"].toString(), success: () => NavigationService.navigatorKey.currentContext!.push(RoutingConstants.personalDataScreen));
     });
     super.initState();
   }
@@ -36,7 +36,7 @@ class _MyAppState extends State<MyApp> {
       create: (context) => sl<AuthCubit>(),
       child: ScreenUtilInit(
         splitScreenMode: true,
-        designSize: const Size(400, 890),
+        designSize: const Size(393, 852),
         minTextAdapt: true,
         builder: (context, child) {
           return MediaQuery(

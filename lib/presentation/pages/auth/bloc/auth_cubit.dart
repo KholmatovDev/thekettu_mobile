@@ -19,8 +19,8 @@ class AuthCubit extends Cubit<AuthState> {
     return await authRepository.checkToken();
   }
 
-  Future<void> login({String? token,  VoidCallback? success}) async {
+  Future<void> login({String? token, VoidCallback? success}) async {
     await loginUseCase(token: token);
-    success!();
+    if (success != null) success();
   }
 }
