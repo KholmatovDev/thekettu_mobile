@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
+import 'package:thekettu/core/service/navigation/routing.dart';
 import 'package:thekettu/core/theme/app_colors.dart';
 import 'package:thekettu/core/util/extensions.dart';
 import 'package:thekettu/presentation/pages/auth/bloc/auth_cubit.dart';
@@ -67,7 +69,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   child: PageView.builder(
                     itemCount: 3,
                     controller: pageController,
-                    physics: const NeverScrollableScrollPhysics(),
+                    // physics: const NeverScrollableScrollPhysics(),
                     scrollDirection: Axis.horizontal,
                     onPageChanged: (value) {
                       currentPage = value;
@@ -96,7 +98,8 @@ class _LoginScreenState extends State<LoginScreen> {
                               ? OptionsButton(
                                   text: "Ro'yxatdan o'tish",
                                   onTap: () {
-                                    context.read<AuthCubit>().login();
+                                    // context.read<AuthCubit>().login();
+                                    context.push(RoutingConstants.personalDataScreen);
                                   },
                                 ).paddingSymmetric(horizontal: 30.w)
                               : GlobalButton(

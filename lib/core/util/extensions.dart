@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'dart:io';
 import 'package:flutter/material.dart';
 
+import '../assets/typography.dart';
 import '../theme/app_colors.dart';
 import '../assets/app_images.dart';
 import '../theme/app_colors.dart';
@@ -98,40 +99,61 @@ extension WrapWidgetExtension on String {
 // }
 
 extension NumExtension on num {
-
   SizedBox get ph => SizedBox(height: toDouble().h);
+
   SizedBox get pw => SizedBox(width: toDouble().w);
+
   /// Text Styles
-  // TextStyle regular({Color? color, String? fontFamily}) {
-  //   return TextStyle(fontSize: toDouble(), color: color ?? AppColors.primaryBlueText, fontFamily: fontFamily??AppFontFamilies.inter, fontWeight: FontWeight.w400);
-  // }
-  //
-  // TextStyle medium({Color? color, String? fontFamily}) {
-  //   return TextStyle(fontSize: toDouble(), color: color ?? AppColors.primaryBlueText, fontFamily: fontFamily??AppFontFamilies.inter, fontWeight: FontWeight.w500);
-  // }
-  //
-  // TextStyle semiBold({Color? color, String? fontFamily}) {
-  //   return TextStyle(fontSize: toDouble(), color: color ?? AppColors.primaryBlueText, fontFamily: fontFamily??AppFontFamilies.inter, fontWeight: FontWeight.w600);
-  // }
-  //
-  // TextStyle bold({Color? color, String? fontFamily}) {
-  //   return TextStyle(fontSize: toDouble(), color: color ?? AppColors.primaryBlueText, fontFamily: fontFamily??AppFontFamilies.inter, fontWeight: FontWeight.w700);
-  // }
-  //
-  // TextStyle extraBold({Color? color, String? fontFamily}) {
-  //   return TextStyle(fontSize: toDouble(), color: color ?? AppColors.primaryBlueText, fontFamily: fontFamily??AppFontFamilies.inter, fontWeight: FontWeight.w800);
-  // }
+  TextStyle regular({Color? color, String? fontFamily}) {
+    return TextStyle(
+        fontSize: toDouble(),
+        color: color ?? AppColors.black,
+        fontFamily: fontFamily ?? AppFontFamilies.plusJakartaSans,
+        fontWeight: FontWeight.w400);
+  }
 
-// (String, TextStyle) text99() {
-//   if (this > 99) {
-//     return ("99+", 10.semiBold(AppColors.white));
-//   } else {
-//     return (toString(), 12.semiBold(AppColors.white));
-//   }
-// }
+  TextStyle medium({Color? color, String? fontFamily}) {
+    return TextStyle(
+        fontSize: toDouble(),
+        color: color ?? AppColors.black,
+        fontFamily: fontFamily ?? AppFontFamilies.plusJakartaSans,
+        fontWeight: FontWeight.w500);
+  }
 
-// /// Other
-// Divider divider([Color? color]) => Divider(thickness: toDouble(), color: color ?? AppColors.underline);
+  TextStyle semiBold({Color? color, String? fontFamily}) {
+    return TextStyle(
+        fontSize: toDouble(),
+        color: color ?? AppColors.black,
+        fontFamily: fontFamily ?? AppFontFamilies.plusJakartaSans,
+        fontWeight: FontWeight.w600);
+  }
+
+  TextStyle bold({Color? color, String? fontFamily}) {
+    return TextStyle(
+        fontSize: toDouble(),
+        color: color ?? AppColors.black,
+        fontFamily: fontFamily ?? AppFontFamilies.plusJakartaSans,
+        fontWeight: FontWeight.w700);
+  }
+
+  TextStyle extraBold({Color? color, String? fontFamily}) {
+    return TextStyle(
+        fontSize: toDouble(),
+        color: color ?? AppColors.black,
+        fontFamily: fontFamily ?? AppFontFamilies.plusJakartaSans,
+        fontWeight: FontWeight.w800);
+  }
+
+  (String, TextStyle) text99() {
+    if (this > 99) {
+      return ("99+", 10.semiBold());
+    } else {
+      return (toString(), 12.semiBold());
+    }
+  }
+
+  /// Other
+  // Divider divider([Color? color]) => Divider(thickness: toDouble(), color: color ?? AppColors.underline);
 }
 
 extension KeyExtension on GlobalKey {
